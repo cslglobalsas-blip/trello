@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -30,8 +30,13 @@ export default function Auth() {
     );
   }
 
+  useEffect(() => {
+    if (session) {
+      router.replace('/')
+    }
+  }, [session, router])
+
   if (session) {
-    router.replace('/')
     return null
   }
 
