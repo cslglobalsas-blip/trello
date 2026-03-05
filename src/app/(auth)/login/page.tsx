@@ -22,22 +22,18 @@ export default function Auth() {
   const [fullName, setFullName] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  if (loading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
-        <div className="animate-pulse text-muted-foreground">Cargando...</div>
-      </div>
-    );
-  }
-
   useEffect(() => {
     if (session) {
       router.replace('/')
     }
   }, [session, router])
 
-  if (session) {
-    return null
+  if (loading || session) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background">
+        <div className="animate-pulse text-muted-foreground">Cargando...</div>
+      </div>
+    );
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
