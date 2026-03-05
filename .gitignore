@@ -13,6 +13,9 @@ dist-ssr
 *.local
 .env
 
+# MCP config (contains secrets)
+.mcp.json
+
 # Logs
 logs
 *.log
