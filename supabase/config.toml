@@ -1,0 +1,19 @@
+project_id = "kdotaqphltpzwigkvike"
+
+[functions.invite-user]
+verify_jwt = false
+
+[functions.manage-user]
+verify_jwt = false
+
+[functions.daily-task-email]
+verify_jwt = false
+
+[functions.ai-recommendations]
+verify_jwt = false
+
+[functions.ai-assistant]
+verify_jwt = false
+
+[functions.notify-task-assigned]
+verify_jwt = false

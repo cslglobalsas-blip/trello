@@ -1,0 +1,1 @@
+UPDATE project_columns SET is_final = true WHERE project_id = '55f1f1fa-8b05-4815-b50a-dd45799087b1' AND name = 'Completado';
